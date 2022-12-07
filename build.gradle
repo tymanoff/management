@@ -18,12 +18,26 @@ repositories {
 	mavenCentral()
 }
 
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation group: 'org.apache.cxf', name: 'cxf-spring-boot-starter-jaxws', version: '3.5.4'
+
+	implementation 'javax.jws:javax.jws-api:1.1'
+
+	implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.3.Final'
+	implementation group: 'org.mapstruct', name: 'mapstruct-processor', version: '1.5.3.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+
+	implementation 'org.postgresql:postgresql:42.5.0'
+
+	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
 }
 
 tasks.named('test') {
